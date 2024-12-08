@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Date Calculator",
+  "version": "1.0",
+  "description": "Calculate the number of days between dates or get the date based on a number of days.",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "schedule.png"
+  },
+  "permissions": [],
+  "icons": {
+    "16": "schedule.png",
+    "48": "schedule.png",
+    "128": "schedule.png"
+  }
+}
