@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Calculator</title>
+    <title>Appointment & Medication Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div class="container">
-    <h1>Date Calculator</h1>
-    <div class="calculator">
-        <div class="section">
-            <h3>Calculate Number of Days</h3>
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDate">
-            <button id="calculateDaysButton">Calculate Days</button>
-            <p id="daysOutput"></p>
+    <div class="container">
+        <h1>Appointment & Medication Tracker</h1>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="appointments">Appointments</button>
+            <button class="tab-btn" data-tab="medication">Medication</button>
         </div>
-        <div class="section">
-            <h3>Calculate Date</h3>
-            <label for="numDays">Number of Days:</label>
-            <input type="number" id="numDays">
-            <button id="calculateDateButton">Calculate Date</button>
-            <p id="dateOutput"></p>
+
+        <div class="tab-content" id="appointments">
+            <div class="calculator">
+                <div class="section">
+                    <h3>Next Appointment</h3>
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate">
+                    <button id="calculateDaysButton">Calculate Days</button>
+                    <p id="daysOutput"></p>
+                </div>
+                <div class="section">
+                    <h3>Date Calculator</h3>
+                    <label for="numDays">Number of Days:</label>
+                    <div class="date-direction">
+                        <input type="number" id="numDays" min="1">
+                        <select id="dateDirection">
+                            <option value="future">Forward</option>
+                            <option value="past">Backward</option>
+                        </select>
+                    </div>
+                    <button id="calculateDateButton">Calculate Date</button>
+                    <p id="dateOutput"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="medication">
+            <div class="calculator">
+                <div class="section">
+                    <h3>Medication Calculator</h3>
+                    <label for="dosesPerDay">Doses Per Day:</label>
+                    <input type="number" id="dosesPerDay" min="0.25" step="0.25">
+                    <label for="treatmentDays">Number of Days:</label>
+                    <input type="number" id="treatmentDays" min="1">
+                    <button id="calculateTotalButton">Calculate Total Tablets</button>
+                    <p id="totalOutput"></p>
+                </div>
+                <div class="section">
+                    <h3>Remaining Tablets</h3>
+                    <label for="nextAppointment">Next Appointment:</label>
+                    <input type="date" id="nextAppointment">
+                    <label for="dailyDose">Daily Doses:</label>
+                    <input type="number" id="dailyDose" min="0.25" step="0.25">
+                    <button id="calculateRemainingButton">Calculate Tablets Needed</button>
+                    <p id="remainingOutput"></p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
