@@ -1,56 +1,44 @@
-# Date Calculator Chrome Extension
+# Appointment & Medication Tracker
 
-A simple Chrome Extension that allows you to:
-- Calculate the number of days between two dates.
-- Get the date based on a specified number of days.
-- Display the day of the week for the provided date.
+A user-friendly web application to help track appointments and manage medication schedules.
 
 ## Features
-- Input a start date and number of days to calculate the end date.
-- Input a number of days and get the start date.
-- See which day of the week it is for the given date.
-- Intuitive user interface with a clean design.
 
-## Prerequisites
-- Google Chrome browser
-- A stable internet connection for extension installation
+### Appointment Management
+- **Days Calculator**: Calculate the number of days between two dates
+- **Date Calculator**: 
+  - Calculate future dates by adding days
+  - Calculate past dates by subtracting days
+  - Displays results with full date format (weekday, month, day, year)
 
-## Getting Started
+### Medication Management
+- **Tablet Calculator**:
+  - Calculate total tablets needed based on daily doses and treatment duration
+  - Supports decimal values for dosing (e.g., 0.5, 1.5 tablets per day)
+  - Automatically rounds up to ensure sufficient medication
 
-To start using the Date Calculator Chrome Extension, follow these steps:
+- **Appointment Planner**:
+  - Calculate tablets needed until next appointment
+  - Automatically computes days remaining until appointment
+  - Shows total tablets required for the period
 
-### 1. Download or Clone the Repository
+## Usage
 
-Clone the repository to your local machine using:
+1. **Appointment Tab**
+   - Use the "Next Appointment" calculator to find days between dates
+   - Use the "Date Calculator" to find future or past dates
+   - Select "Forward" or "Backward" to calculate dates in either direction
 
-```bash
-git clone https://github.com/elviswangari/dateCalculator.git
-```
-## 2. Load the Extension in Chrome
+2. **Medication Tab**
+   - Enter doses per day (supports decimals) and treatment duration
+   - For appointment planning, enter your next appointment date and daily dose
+   - All calculations automatically round up to ensure you have enough medication
 
-### Step 1: Open Chrome Extensions
-- Open the **Google Chrome** browser.
-- Navigate to `chrome://extensions/` in the address bar.
-
-### Step 2: Enable Developer Mode
-- Toggle the **Developer mode** switch at the top-right corner of the extensions page.
-
-### Step 3: Load the Extension
-- Click on the **Load unpacked** button.
-- Select the folder containing the extension files (where `manifest.json`, `index.html`, `styles.css`, `script.js` are located).
-- The extension will be loaded, and you'll see it in the extensions list.
-
-## 3. Use the Extension
-
-### Step 1: Access the Extension
-- Once loaded, you should see the extension icon in the **Chrome toolbar** (top-right corner).
-- Click on the extension icon to open the popup.
-
-### Step 2: Interact with the Calculator
-- In the popup, enter a **start date** (default is today's date).
-- Choose the **number of days** (to calculate the end date) or vice versa.
-- The results will display:
-    - The **calculated date**.
-    - The **day of the week** for that date.
+## Technical Details
+- Built with vanilla JavaScript
+- Responsive design
+- No external dependencies required
+- Local date calculations
+- Supports decimal inputs for precise dosing
 
 
